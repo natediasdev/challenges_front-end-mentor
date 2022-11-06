@@ -33,13 +33,19 @@
       </div>
       <section class="items">
         <div class="data">
-          <span class="input">Cardholder Name<input type="text" id="" placeholder=""></span>
-          <span class="input">Card Number<input type="text" id="" placeholder=""></span>
+          <span class="input">Cardholder Name<input type="text" id="cardholder-name" placeholder="ex: Jane Aplleseed"></span>
+          <span class="error" id="errorName"></span>
+          <span class="input">Card Number<input type="number" id="card-number" placeholder="ex: 1234 5678 9123 0000"></span>
+          <span class="error" id="errorNumber"></span>
           <div class="ultima-linha">
-            <span class="input-especial">Exp. Date (MM/YY)<div class="date"><input type="text" id="" placeholder=""><input type="text" id="" placeholder=""></div></span>
-            <span>CVC<input type="text" id="" placeholder=""></span>
+            <span class="input-especial">Exp. Date<div class="date"><input type="number" id="month" placeholder="MM"><input type="number" id="year" placeholder="YY"></div></span>
+            <span>CVC<input type="number" id="cvc" placeholder="ex: 123"></span>
           </div>
-          <input type="submit" value="Confirm">
+          <div class="errors">
+            <span class="error" id="errorYear"></span>
+            <span class="error" id="errorCvc"></span>
+          </div>
+          <input type="submit" value="Confirm" onclick="valid()">
         </div>
       </section>
     </main>
